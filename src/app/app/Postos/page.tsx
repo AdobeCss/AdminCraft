@@ -89,7 +89,7 @@ export default function UserManagement() {
   const [query, setQuery] = React.useState("");
 
 
-  const filteredData = [,,,,,,,,]?.filter((item:any) =>
+  const filteredData:any[]= [,,,,,,,,]?.filter((item: any) =>
     Object.values(item)?.some((val) =>
       val?.toString()?.toLowerCase()?.includes(query?.toLowerCase())
     )

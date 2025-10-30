@@ -39,7 +39,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const {"nextauth.token_Mweto":token,"nextauth.id_Mweto":id}=parseCookies()
        
         if(token){
-            recoverUserInformations(token,id).then(resp=>{ 
+            recoverUserInformations().then(resp=>{ 
                 setUser(resp.data)      
             })
         }

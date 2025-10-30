@@ -20,13 +20,9 @@ const api: AxiosInstance = axios.create({
   },
 });
 
-api.interceptors.request.use((config: AxiosRequestConfig) =>{
+api.interceptors.request.use((config: any) =>{
   
   const updatedToken = parseCookies()['nextauth.token_Mweto'];
-  
-    if (updatedToken) {
-      config.headers['Authorization'] = `Bearer ${token_}` as AxiosRequestConfig
-    }
     return config;    
   },
   (error) => {

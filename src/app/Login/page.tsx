@@ -1,6 +1,5 @@
 'use client'
 
-import "../globals.css";
 import { useState,useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -16,7 +15,7 @@ import { toast } from 'react-toastify';
 import { AuthContext, AuthContextType } from "@/context/AuthContext";
 import { useRouter } from 'next/navigation';
 
-export const Spinner = () => (
+const Spinner = () => (
   <div className="animate-spin h-5 w-5 border-4 border-t-transparent border-blue-500 rounded-full"></div>
 );
 
@@ -58,7 +57,7 @@ export default function Login() {
 
         </CardHeader>
         <CardContent className='border-none'>
-          <form onSubmit={handleSubmit(handleSignIn)}  className="space-y-4">
+          <form onSubmit={handleSubmit(handleSignIn as any)}  className="space-y-4">
             <div className="space-y-2">
               <label htmlFor="email" className="text-sm font-medium text-gray-700">
                 Email
@@ -92,7 +91,6 @@ export default function Login() {
             </div>
        
             <Button type="submit" className="w-full cursor-pointer" >
-            {loading ? <Spinner className="mr-2" /> : null}
             {loading ? "Carregando..." : "Entrar"}
             </Button>
           </form>

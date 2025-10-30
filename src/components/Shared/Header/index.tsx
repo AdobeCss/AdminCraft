@@ -1,7 +1,6 @@
 
 
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { AlertCircle, ArrowLeft, ArrowRight, ChartNoAxesCombinedIcon, Circle, Download, Edit, Filter, InfoIcon, LogOut, LucideMenuSquare, Maximize, MenuSquare, PlusIcon, PowerOffIcon, ProjectorIcon, RefreshCcw, Reply, Search, Settings, SquareActivity, Trash2, User } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -21,18 +20,11 @@ export default function HeaderComponent() {
   const { user } = useContext(AuthContext)  as AuthContextType
 const[enterprise,setEnterprise]=useState(true)
 
-// useEffect(() => {
-//   setEnterprise(user?.hasInstituicao)
-// })
 
 
     return(
         <>
 
-        {/* {
-          enterprise?<></>:<RegisterEmterprise/>
-        }
-     */}
         <header className="flex w-full items-center p-1 justify-between border-b border-zinc-100 h-[30px]">
           <div className="flex px-2 gap-8">
             <div className="flex gap-2 items-center">

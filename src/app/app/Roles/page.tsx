@@ -76,7 +76,7 @@ export default function UserManagement() {
 
   const [query, setQuery] = React.useState("");
 
-  const filteredData: RoleType[] = [,,,,,,,,]?.filter((item: any) =>
+  const filteredData:any[]= [,,,,,,,,]?.filter((item: any) =>
     Object.values(item)?.some((val) =>
       val?.toString()?.toLowerCase()?.includes(query?.toLowerCase())
     )
@@ -195,7 +195,7 @@ export default function UserManagement() {
                               <Button
                                 variant="ghost"
                                 size="sm"
-                                onClick={() => mutate(data.id as number)}
+                                onClick={() => mutate(data?.id)}
                               >
                                 <Trash2 className="h-4 w-4" />
                               </Button>

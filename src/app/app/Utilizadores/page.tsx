@@ -77,7 +77,7 @@ export default function UserManagement() {
 
   const [query, setQuery] = React.useState("");
 ;
-  const filteredData: UserType[] = [,,,,,,,,]?.filter((item:any) =>
+  const filteredData:any[]= [,,,,,,,,]?.filter((item: any) =>
     Object.values(item)?.some((val) =>
       val?.toString()?.toLowerCase()?.includes(query?.toLowerCase())
     )
@@ -314,7 +314,7 @@ function EditForm({ user }: { user: UserType }) {
 
   const form = useForm();
   return (
-    <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+    <form onSubmit={form.handleSubmit(handleSubmit as any)} className="space-y-4">
       <SheetHeader>
         <SheetTitle>Edit User</SheetTitle>
       </SheetHeader>

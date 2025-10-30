@@ -20,11 +20,7 @@ const PostData = async (data: any) => {
 
   const formData = new FormData();
   formData.append('logo', data.logo)
-  console.log("==================================")
 
-  console.log(formData.toString())
-  console.log(response?.data.dados.id)
-  
 
   const response_ = await api.put("/instituicao/update-logo/"+response?.data.dados.id,
     formData,{

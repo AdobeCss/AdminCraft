@@ -35,17 +35,6 @@ export default function CompanyRegistrationDialog() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log({ companyName,email , logo })
-    
-    console.log({ companyName})
-    console.log(companyName)
-
-    create.mutate({
-      name:companyName,
-      email:email,
-      logo:logo,
-    })
-    
     setIsOpen(false)
   }
 
