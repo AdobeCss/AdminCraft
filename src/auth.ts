@@ -11,6 +11,10 @@ export default NextAuth({
         email: { label: 'Email', type: 'text' },
         password: { label: 'Password', type: 'password' }
       },
+
+
+
+      
       async authorize(credentials) {
         const res = await fetch('https://your-external-api.com/auth', {
           method: 'POST',
